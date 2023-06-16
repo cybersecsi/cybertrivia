@@ -12,6 +12,10 @@ export interface IGameQuestionWithId extends IGameQuestion {
   id: number;
 }
 
+export interface IGameQuestionWithIdAndCategory extends IGameQuestionWithId {
+  category: string;
+}
+
 export interface IGameBoard {
   [category: string]: IGameQuestionWithId[];
 }

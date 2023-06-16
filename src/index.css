@@ -140,6 +140,10 @@
   .trivia-card {
     @apply flex gap-2 items-center justify-center rounded-md p-4 text-center transition-all duration-300;
   }
+  .mini-container {
+    @apply container;
+    @apply max-w-5xl px-2;
+  }
 }
 
 @layer utilities {

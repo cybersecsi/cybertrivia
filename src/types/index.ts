@@ -3,4 +3,5 @@ export type {
   IBaseGameQuestion,
   IGameQuestion,
   IGameQuestionWithId,
+  IGameQuestionWithIdAndCategory,
 } from '@/types/IGame';

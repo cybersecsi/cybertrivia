@@ -3,6 +3,7 @@ import { GameProvider } from '@/context/game';
 import { RouterProvider } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import 'tippy.js/dist/tippy.css'; // optional
+import 'animate.css';
 
 const App = () => {
   return (

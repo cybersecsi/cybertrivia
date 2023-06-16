@@ -26,8 +26,8 @@ const Board = () => {
               {gameBoard[category].map((question: IGameQuestionWithId) => {
                 const styleMapping = {
                   pending: 'bg-sky-300 hover:bg-sky-500 text-white hover:underline',
-                  correct: 'bg-emerald-500',
-                  incorrect: 'bg-rose-500',
+                  correct: 'bg-emerald-500 text-white',
+                  incorrect: 'bg-rose-500 text-white',
                 };
                 return (
                   <>
@@ -49,7 +49,7 @@ const Board = () => {
           );
         })}
       </div>
-      <h1 className='title text-cyan-900 text-center font-semibold'>
+      <h1 className='title text-cyan-900 text-center font-semibold mt-4'>
         Punteggio Totale: {punteggio}
       </h1>
       <div></div>

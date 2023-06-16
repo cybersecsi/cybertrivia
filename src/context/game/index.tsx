@@ -30,8 +30,6 @@ const initialGameBoard = (): IGameBoard => {
   return gameBoard;
 };
 
-console.log(initialGameBoard());
-
 const GameProvider = ({ children }: any): any => {
   const [gameBoard, setGameBoard] = useState<IGameBoard>(initialGameBoard());
 
