@@ -3,32 +3,36 @@ import { IBaseGameQuestion } from '@/types';
 export const questions: { [category: string]: IBaseGameQuestion[] } = {
   'Online Safety': [
     {
-      question:
+      question: [
         "Pubblichi una foto di te e della tua migliore amica sulla tua piattaforma di social media preferita. Lei non si sente a suo agio con l'immagine, quindi accetti di rimuoverla. Ciò assicurerà che nessun'altra persona veda la foto?",
+      ],
       answers: [
         "No. Una volta che un'immagine (o qualsiasi altra informazione) viene pubblicata su internet, è praticamente impossibile rimuoverla completamente dalla circolazione. Rimuoverla dalla tua pagina dei social media aiuterà, ma non c'è alcuna garanzia che altre persone non l'abbiano già vista e/o scaricata sui propri dispositivi.",
       ],
       points: 100,
     },
     {
-      question:
+      question: [
         "Ricevi un'email da un sito di shopping online che sostiene che ti sia stato addebitato in modo errato l'ultimo acquisto e che hai diritto a un rimborso. L'email ti chiede di cliccare su un link dove inserirai le informazioni necessarie. Cosa dovresti fare?",
+      ],
       answers: [
         "NON cliccare sul link! Controlla l'indirizzo del mittente e verifica il documento per eventuali errori di ortografia/grammatica. Se noti qualcosa di sospetto, è probabile che l'email sia una truffa. Anche se sembra legittima, accedi al sito da solo anziché cliccare su eventuali link.",
       ],
       points: 200,
     },
     {
-      question:
+      question: [
         "Ti sei appena sistemato nella tua nuova camera d'albergo quando ti rendi conto di dover trasferire alcuni fondi dal tuo conto di risparmio al tuo conto corrente. Per farlo, dovrai connettere il tuo laptop alla rete Wi-Fi pubblica dell'hotel e accedere al tuo conto bancario online. Dovresti rischiare?",
+      ],
       answers: [
         "Dipende. In generale, non è mai sicuro trasmettere informazioni personali identificabili (PII), soprattutto informazioni finanziarie, su una rete pubblica. Se ti trovi in una situazione in cui potresti averne bisogno, considera prima tutte le opzioni, inclusa l'uso dei tuoi dati mobili o di una VPN (rete virtuale privata) per proteggere la tua navigazione.",
       ],
       points: 300,
     },
     {
-      question:
+      question: [
         "Hai un lungo tragitto pendolare. Per fortuna, il tuo treno ha appena installato una rete Wi-Fi pubblica. Ora puoi ascoltare la tua musica o il tuo podcast preferito. Tuttavia, quando controlli gli aggiornamenti dei social media intorno all'ora di pranzo, scopri che il tuo account è stato hackerato. Quali misure potresti prendere per evitare che i dati del tuo dispositivo mobile o del tuo laptop vengano compromessi in futuro?",
+      ],
       answers: [
         '1. Disattiva Wi-Fi e Bluetooth quando non li stai utilizzando. Queste tecnologie ti lasciano vulnerabile ad attacchi remoti.',
         "2. Assicurati che la rete sia legittima. Gli hacker amano creare reti false che imitano quelle reali, attirando utenti ignari a effettuare l'accesso.",
@@ -36,9 +40,202 @@ export const questions: { [category: string]: IBaseGameQuestion[] } = {
       ],
       points: 400,
     },
+    {
+      question: [
+        'Le password spesso hanno requisiti complessi e la maggior parte degli utenti online deve ricordare numerose password diverse per accedere ai propri servizi Internet. Qual è un modo per aiutarti a tenere traccia di tutte queste password diverse?',
+      ],
+      answers: [
+        'Utilizza un gestore di password. Questi sono app, dispositivi o servizi cloud che memorizzano le tue password in una cassaforte crittografata che può essere sbloccata solo con una singola password principale.',
+        "Utilizza un 'password pattern'. Si tratta semplicemente di un modello (riconoscibile solo da te) che puoi utilizzare per aiutarti a ricordare le tue password.",
+      ],
+      points: 500,
+    },
   ],
-  'Device Security': [],
-  'Tipi di Attacco': [],
-  'Cyber History': [],
-  'Cyber Stats': [],
+  'Device Security': [
+    {
+      question: [
+        'Quali delle seguenti sono pratiche sicure per le password?',
+        '1. Le password dovrebbero contenere una combinazione di lettere maiuscole e minuscole, numeri e caratteri speciali.',
+        '2. Le password dovrebbero avere un significato personale per te (ad esempio, il compleanno di un parente) in modo da poterle ricordare più facilmente.',
+        '3. Dovresti cambiare immediatamente la tua password in caso di violazione dei dati nota.',
+        '4. Dovresti conservare le tue password su carta o in un documento di testo, per avere un backup nel caso in cui le dimentichi.',
+      ],
+      answers: [
+        '1 e 3. Sebbene sia utile che le password abbiano un certo grado di rilevanza personale, qualsiasi informazione concreta o disponibile pubblicamente (scuole superiori, date di nascita, nomi degli animali domestici, ecc.) può essere facilmente ricercata e indovinata da un attaccante. Conservare le password fisicamente o in un documento di testo non è consigliato, poiché qualcuno potrebbe ottenere accesso alla copia.',
+      ],
+      points: 100,
+    },
+    {
+      question: [
+        'Vero o falso: Aggiornare automaticamente la tua macchina rappresenta un grave rischio per la sicurezza, poiché potrebbe installare programmi o funzionalità indesiderate che disturbano la tua rete o danneggiano il tuo computer.',
+      ],
+      answers: [
+        'Falso. Sebbene gli aggiornamenti occasionalmente possano causare problemi, contengono anche patch vitali per aiutare a proteggere la tua macchina dagli attacchi. Mantieni la tua macchina aggiornata e installa nuove patch il prima possibile. Non cliccare ripetutamente su "Ricordamelo più tardi".',
+      ],
+      points: 200,
+    },
+    {
+      question: [
+        'Sebbene operino in modo simile ai computer, la maggior parte dei dispositivi mobili (telefoni cellulari, tablet, ecc.) non sono computer completi e non richiedono software, come antivirus, per essere sicuri.',
+      ],
+      answers: [
+        'Falso. Quasi tutti i dispositivi per consumatori, in particolare telefoni cellulari e tablet, sono semplicemente computer in miniatura. Contengono dati importanti (contatti, informazioni finanziarie, calendari) e richiedono protezione come qualsiasi altro dispositivo.',
+      ],
+      points: 300,
+    },
+    {
+      question: [
+        'Quali di questi dispositivi potrebbero potenzialmente essere sfruttati da un attaccante?',
+        'Computer Desktop',
+        'Laptop',
+        'Tablet',
+        'Smartphone',
+        'Videocamera di sicurezza',
+        'Pacemaker',
+        'Televisione',
+        'Baby monitor',
+        'Frigorifero',
+        'GPS',
+        'Assistente Digitale',
+        'Tostapane',
+        'Termostato',
+      ],
+      answers: ['Tutti. Sì, anche il tostapane, potenzialmente.'],
+      points: 400,
+    },
+    {
+      question: [
+        'Qual è il metodo di controllo degli accessi mediante il quale gli utenti devono presentare più identificazioni separate, come una password e una scheda di accesso, per accedere a un sistema?',
+      ],
+      answers: [
+        "Autenticazione Multi-Fattore (MFA). MFA aumenta notevolmente la sicurezza del controllo degli accessi. Anche se una password viene scoperta o un'identificazione viene rubata, non sarà sufficiente compromettere un sistema. Molti servizi online offrono opzioni di MFA, come richiedere un codice di accesso monouso insieme a una password.",
+      ],
+      points: 500,
+    },
+  ],
+  'Tipi di Attacco': [
+    {
+      question: [
+        'Un truffatore crea una falsa email e la invia a migliaia di persone, sperando che alcune di esse clicchino su un link e forniscano le proprie informazioni personali. Come si chiama questo tipo di attacco?',
+      ],
+      answers: [
+        "Phishing - un tipo di ingegneria sociale che spesso manipola gli impulsi umani, come l'avidità, la paura o il desiderio di aiutare gli altri.",
+      ],
+      points: 100,
+    },
+    {
+      question: [
+        'Qual è il termine per un software dannoso che cerca di danneggiare o sfruttare le macchine su cui viene eseguito?',
+      ],
+      answers: [
+        "Malware. Questo sta per 'malicious software' (software maligno) e si riferisce a una vasta gamma di attacchi basati su software.",
+      ],
+      points: 200,
+    },
+    {
+      question: [
+        'Un attaccante va in un bar e crea una rete wireless utilizzando il nome del bar, sperando che i clienti ignari si connettano. Come si chiama questo tipo di attacco?',
+      ],
+      answers: [
+        'Evil Twin. Questo tipo di attacco può assumere molte forme (email, GPS, ID chiamante), ma è più comunemente conosciuto in relazione a reti wireless false e dannose. Prima di connetterti a una rete pubblica, assicurati che sia quella corretta.',
+      ],
+      points: 300,
+    },
+    {
+      question: [
+        'Porti il tuo laptop in un ristorante locale. Senza che tu lo sappia, il cliente al tavolo dietro di te ti osserva mentre accedi alla tua email, apprendendo così il tuo nome utente e la tua password. Come si chiama questo tipo di attacco?',
+      ],
+      answers: [
+        'Shoulder surfing. È importante ricordare che non tutti gli attacchi informatici richiedono la manipolazione diretta della tecnologia. Gli aggressori spesso possono ottenere informazioni importanti semplicemente osservando le persone, facendo domande o collegando insieme fatti dissociati per apprendere o indovinare qualcosa di privato.',
+      ],
+      points: 400,
+    },
+    {
+      question: [
+        'Dopo aver cliccato su un annuncio su un sito non sicuro, il tuo computer si blocca. Compare un messaggio che ti chiede di pagare una determinata somma di denaro per sbloccare il tuo computer. Come si chiama questo tipo di attacco?',
+      ],
+      answers: [
+        'Ransomware. Questo tipo di attacco è diventato più comune negli ultimi anni, soprattutto contro istituzioni che hanno bisogno di recuperare i propri dati il prima possibile, come strutture mediche.',
+      ],
+      points: 500,
+    },
+  ],
+  'Cyber History': [
+    {
+      question: [
+        "Questo imprenditore è ampiamente conosciuto per i suoi contributi all'industria dei personal computer. Ha fondato la Microsoft Corporation nel 1975, insieme al suo socio commerciale Paul Allen. Di chi stiamo parlando?",
+      ],
+      answers: ['Bill Gates'],
+      points: 100,
+    },
+    {
+      question: [
+        'Quale agenzia italiana è stata incaricata di migliorare la sicurezza informatica nazionale e proteggere le infrastrutture critiche del paese?',
+      ],
+      answers: [
+        "L'Agenzia per la cybersicurezza nazionale. In particolare, l'ACN è responsabile della protezione delle infrastrutture critiche della nazione da minacce informatiche.",
+      ],
+      points: 200,
+    },
+    {
+      question: [
+        "Questo crittoanalista inglese è famoso per aver decifrato messaggi codificati durante la Seconda guerra mondiale e per aver creato standard per l'intelligenza artificiale. È considerato da molti il padre dell'informatica teorica. (Suggerimento: Nel 2014 è stato realizzato un film basato sulla sua biografia.)",
+      ],
+      answers: [
+        `Alan Turing. Turing ha aiutato gli Alleati decifrando messaggi intercettati dalle forze tedesche, ottenendo informazioni cruciali per la vittoria degli Alleati. Ha anche creato il "test di Turing", che valuta la capacità di una macchina di mostrare comportamenti umani, simile all'intelligenza artificiale.`,
+      ],
+      points: 300,
+    },
+    {
+      question: [
+        "Questa scrittrice e matematica inglese è nota per il suo lavoro sull'Analytical Engine ed è considerata uno dei primi programmatori informatici.",
+      ],
+      answers: [
+        "Ada Lovelace ha lavorato accanto a Charles Babbage negli anni '40 del 1800 per pubblicare il primo algoritmo basato su computer.",
+      ],
+      points: 400,
+    },
+    {
+      question: [
+        'Nel maggio 2017, questo attacco informatico su scala mondiale ha utilizzato ransomware per sfruttare circa 400.000 macchine non aggiornate, causando danni per oltre 4.000.000.000 di dollari (4 miliardi di USD).',
+      ],
+      answers: [
+        'WannaCry. Questo attacco ransomware si è diffuso attraverso uno sfruttamento chiamato EternalBlue, che ha sfruttato sistemi Windows più vecchi. Le macchine colpite hanno visto i loro dati criptati involontariamente, con una richiesta di pagamento in Bitcoin per il loro rilascio.',
+      ],
+      points: 500,
+    },
+  ],
+  'Cyber Stats': [
+    {
+      question: ['Quanti attacchi informatici tentati vengono segnalati al Pentagono ogni giorno?'],
+      answers: ['Oltre 10 milioni.'],
+      points: 100,
+    },
+    {
+      question: [
+        'Quanti posti di lavoro in campo di sicurezza informatica vacanti ci sono solo negli Stati Uniti?',
+      ],
+      answers: ['310.000'],
+      points: 200,
+    },
+    {
+      question: [
+        'A livello globale, quanti posti di lavoro in campo di sicurezza informatica vacanti si prevede ci saranno entro il 2022?',
+      ],
+      answers: ['1,8 milioni'],
+      points: 300,
+    },
+    {
+      question: [
+        'Qual è il costo stimato di un attacco di phishing di successo per una singola piccola o media impresa?',
+      ],
+      answers: ['1,6 milioni di dollari USD'],
+      points: 400,
+    },
+    {
+      question: ['Qual è il costo globale stimato della cybercriminalità entro la fine del 2019?'],
+      answers: ['2 trilioni di dollari USD'],
+      points: 500,
+    },
+  ],
 };

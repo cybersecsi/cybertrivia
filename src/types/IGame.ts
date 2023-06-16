@@ -1,5 +1,5 @@
 export interface IBaseGameQuestion {
-  question: string;
+  question: string[];
   answers: string[];
   points: number;
 }

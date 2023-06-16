@@ -76,7 +76,9 @@ const Question = () => {
     <div className='flex flex-col gap-2'>
       <h1 className='text-3xl'>Domanda</h1>
       <div className='content'>
-        <p>{question.question}</p>
+        {question.question.map((q: string) => (
+          <p>{q}</p>
+        ))}
       </div>
       {isAnswerVisible ? (
         <>

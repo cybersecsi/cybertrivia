@@ -41,7 +41,7 @@ const Board = () => {
           );
         })}
       </div>
-      <h1 className='title text-cyan-900 text-center font-semibold mt-4'>
+      <h1 className='title text-cyan-900 text-center font-semibold mt-8'>
         Punteggio Totale: {punteggio}
       </h1>
       <div></div>
