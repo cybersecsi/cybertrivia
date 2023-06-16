@@ -13,20 +13,19 @@ interface ProviderInterface {
 const GameContext = createContext<ProviderInterface | null>(null);
 
 const initialGameBoard = (): IGameBoard => {
-  const gameBoard: IGameBoard = Object.entries(questions).reduce(
-    (acc: IGameBoard, value: [string, IBaseGameQuestion[]]) => {
-      const categoryQuestions: IGameQuestionWithId[] = value[1].map((q: IBaseGameQuestion) => {
-        return {
-          ...q,
-          status: 'pending',
-          id: 2,
-        };
+  const gameBoard: IGameBoard = {};
+  let currentId = 1;
+  for (const category of Object.keys(questions)) {
+    gameBoard[category] = [];
+    for (const question of questions[category]) {
+      gameBoard[category].push({
+        ...question,
+        status: 'pending',
+        id: currentId,
       });
-      acc[value[0]] = categoryQuestions;
-      return acc;
-    },
-    {},
-  );
+      currentId += 1;
+    }
+  }
   return gameBoard;
 };
 

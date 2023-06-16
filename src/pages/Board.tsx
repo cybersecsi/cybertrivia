@@ -25,24 +25,16 @@ const Board = () => {
               <div className='trivia-card bg-cyan-700 text-white'>{category}</div>
               {gameBoard[category].map((question: IGameQuestionWithId) => {
                 const styleMapping = {
-                  pending: 'bg-sky-300 hover:bg-sky-500 text-white hover:underline',
-                  correct: 'bg-emerald-500 text-white',
-                  incorrect: 'bg-rose-500 text-white',
+                  pending: 'bg-sky-300 hover:bg-sky-500 text-white',
+                  correct: 'bg-emerald-500 hover:bg-emerald-600 text-white',
+                  incorrect: 'bg-rose-500 hover:bg-rose-700 text-white',
                 };
                 return (
-                  <>
-                    {question.status === 'pending' ? (
-                      <Link to={`/question/${question.id}`}>
-                        <div className={`trivia-card ${styleMapping[question.status]}`}>
-                          {question.points} <BsArrowRight />
-                        </div>
-                      </Link>
-                    ) : (
-                      <div className={`trivia-card ${styleMapping[question.status]}`}>
-                        {question.points}
-                      </div>
-                    )}
-                  </>
+                  <Link to={`/question/${question.id}`}>
+                    <div className={`trivia-card hover:underline ${styleMapping[question.status]}`}>
+                      {question.points} <BsArrowRight />
+                    </div>
+                  </Link>
                 );
               })}
             </div>

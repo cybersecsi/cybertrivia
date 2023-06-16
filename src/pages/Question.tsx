@@ -3,6 +3,7 @@ import { useGame } from '@/context/game';
 import { IGameQuestionWithId, IGameQuestionWithIdAndCategory } from '@/types';
 import { sleep } from '@/utils/helper';
 import { useEffect, useState } from 'react';
+import { BsArrow90DegLeft } from 'react-icons/bs';
 import { useNavigate, useParams } from 'react-router-dom';
 
 const Question = () => {
@@ -40,6 +41,9 @@ const Question = () => {
       ...questionWithId,
       category: category,
     });
+    if (questionWithId.status !== 'pending') {
+      setIsAnswerVisible(true);
+    }
     await sleep(1000);
     setIsLoading(false);
   };
@@ -75,20 +79,40 @@ const Question = () => {
         <p>{question.question}</p>
       </div>
       {isAnswerVisible ? (
-        <div className='flex flex-col gap-2 mt-2 animate__animated animate__fadeInLeftBig'>
-          <h1 className='text-3xl'>Risposta</h1>
-          <div className='content bg-orange-100 text-white'>
-            <p>{question.answer}</p>
+        <>
+          <div className='flex flex-col gap-2 mt-2 animate__animated animate__fadeInLeftBig'>
+            <h1 className='text-3xl'>Risposta</h1>
+            <div className='content bg-orange-100 text-white'>
+              <p>{question.answer}</p>
+            </div>
+            {question.status === 'pending' ? (
+              <div className='w-full grid grid-cols-2 gap-2 mt-2'>
+                <button
+                  onClick={() => setAnswer('correct')}
+                  className='button-green justify-center'
+                >
+                  Risposta Corretta
+                </button>
+                <button
+                  onClick={() => setAnswer('incorrect')}
+                  className='button-red justify-center'
+                >
+                  Risposta Errata
+                </button>
+              </div>
+            ) : (
+              <button
+                onClick={goHome}
+                className={`mt-2 gap-2 justify-center font-semibold uppercase ${
+                  question.status === 'correct' ? 'button-green' : 'button-red'
+                }`}
+              >
+                {question.status === 'correct' ? 'Risposta Corretta' : 'Risposta Errata'}
+                <BsArrow90DegLeft />
+              </button>
+            )}
           </div>
-          <div className='w-full grid grid-cols-2 gap-2 mt-2'>
-            <button onClick={() => setAnswer('correct')} className='button-green justify-center'>
-              Risposta Corretta
-            </button>
-            <button onClick={() => setAnswer('incorrect')} className='button-red justify-center'>
-              Risposta Errata
-            </button>
-          </div>
-        </div>
+        </>
       ) : (
         <button
           onClick={() => setIsAnswerVisible(true)}
