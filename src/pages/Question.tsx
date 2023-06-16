@@ -44,7 +44,7 @@ const Question = () => {
     if (questionWithId.status !== 'pending') {
       setIsAnswerVisible(true);
     }
-    await sleep(1000);
+    await sleep(500);
     setIsLoading(false);
   };
 
@@ -82,8 +82,10 @@ const Question = () => {
         <>
           <div className='flex flex-col gap-2 mt-2 animate__animated animate__fadeInLeftBig'>
             <h1 className='text-3xl'>Risposta</h1>
-            <div className='content bg-orange-100 text-white'>
-              <p>{question.answer}</p>
+            <div className='content bg-orange-100 text-white flex flex-col gap-2'>
+              {question.answers.map((answer: string) => (
+                <p>{answer}</p>
+              ))}
             </div>
             {question.status === 'pending' ? (
               <div className='w-full grid grid-cols-2 gap-2 mt-2'>
