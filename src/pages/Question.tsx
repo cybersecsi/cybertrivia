@@ -1,7 +1,5 @@
 const Board = () => {
-  return (
-    <></>
-  )
+  return <></>;
 };
 
 export default Board;

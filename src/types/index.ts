@@ -1,1 +1,6 @@
-export type { IGameBoard, IBaseGameQuestion, IGameQuestion, IGameQuestionWithId } from '@/types/IGame';
+export type {
+  IGameBoard,
+  IBaseGameQuestion,
+  IGameQuestion,
+  IGameQuestionWithId,
+} from '@/types/IGame';

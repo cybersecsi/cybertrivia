@@ -5,7 +5,7 @@ export interface IBaseGameQuestion {
 }
 
 export interface IGameQuestion extends IBaseGameQuestion {
-  status: 'pending' | 'correct' | 'incorrect'
+  status: 'pending' | 'correct' | 'incorrect';
 }
 
 export interface IGameQuestionWithId extends IGameQuestion {
@@ -13,6 +13,5 @@ export interface IGameQuestionWithId extends IGameQuestion {
 }
 
 export interface IGameBoard {
-  [category: string]: IGameQuestionWithId[]
+  [category: string]: IGameQuestionWithId[];
 }
-
