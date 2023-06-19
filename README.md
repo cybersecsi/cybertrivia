@@ -16,6 +16,7 @@ _CyberTrivia_ is a simple _React_ application to create a **trivia board game** 
 
 ## 📋 Table of Contents
 
+- [📋 Table of Contents](#-table-of-contents)
 - [⚡ YAML structure](#-yaml-structure)
 - [ℹ️ Usage](#ℹ️-usage)
   - [🔌 Creating a Trivia Game](#-creating-a-trivia-game)
@@ -55,11 +56,11 @@ The YAML file must have the following structure:
 
 Here is a description of these fields:
 
-- <Category>: Represents the category of the trivia questions.
-- <Question>: The trivia question itself.
-- <Option>: Multiple options for the question (if applicable, leave blank otherwise).
-- <Answer>: The correct answer(s) for the question.
-- <Points>: The number of points awarded for answering the question correctly.
+- **Category**: Represents the category of the trivia questions.
+- **Question**: The trivia question itself.
+- **Option**: Multiple options for the question (if applicable, leave blank otherwise).
+- **Answer**: The correct answer(s) for the question.
+- **Points**: The number of points awarded for answering the question correctly.
 
 ## ℹ️ Usage
 
