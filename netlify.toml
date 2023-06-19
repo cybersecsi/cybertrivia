@@ -1,0 +1,12 @@
+# Redirect default Netlify subdomain to primary domain
+
+[[redirects]]
+    from = "https://cybertrivia.netlify.app/*"
+    to = "https://cybertrivia.secsi.io/:splat"
+    status = 301
+    force = true #COMMENT: ensure that we always redirect
+
+[[redirects]]
+    from = "/*"
+    to = "/"
+    status = 200
