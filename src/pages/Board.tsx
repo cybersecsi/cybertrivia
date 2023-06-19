@@ -1,13 +1,18 @@
-import { useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 import { useGame } from '@/context/game';
 import { IGameQuestionWithId } from '@/types';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { BsArrowRight } from 'react-icons/bs';
+import { Spinner } from '@/components';
 
 const Board = () => {
   const { gameBoard } = useGame();
+  const navigate = useNavigate();
 
   const punteggio: number = useMemo(() => {
+    if (!gameBoard) {
+      return 0;
+    }
     return Object.entries(gameBoard).reduce((acc: number, v: [string, IGameQuestionWithId[]]) => {
       const categoryPoints = v[1]
         .filter((q: IGameQuestionWithId) => q.status === 'correct')
@@ -15,6 +20,20 @@ const Board = () => {
       return acc + categoryPoints.reduce((partialSum, a) => partialSum + a, 0);
     }, 0);
   }, [gameBoard]);
+
+  useEffect(() => {
+    if (!gameBoard) {
+      navigate('/');
+    }
+  }, [gameBoard]);
+
+  if (!gameBoard) {
+    return (
+      <div className='flex items-center justify-center'>
+        <Spinner size='80' color='rgb(225 29 72)' />
+      </div>
+    );
+  }
 
   return (
     <>
@@ -44,7 +63,6 @@ const Board = () => {
       <h1 className='title text-cyan-900 text-center font-semibold mt-8'>
         Punteggio Totale: {punteggio}
       </h1>
-      <div></div>
     </>
   );
 };

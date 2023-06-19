@@ -1,6 +1,4 @@
-import { IBaseGameQuestion } from '@/types';
-
-export const questions: { [category: string]: IBaseGameQuestion[] } = {
+{
   'Online Safety': [
     {
       question: [
@@ -182,7 +180,7 @@ export const questions: { [category: string]: IBaseGameQuestion[] } = {
         "Questo crittoanalista inglese è famoso per aver decifrato messaggi codificati durante la Seconda guerra mondiale e per aver creato standard per l'intelligenza artificiale. È considerato da molti il padre dell'informatica teorica. (Suggerimento: Nel 2014 è stato realizzato un film basato sulla sua biografia.)",
       ],
       answers: [
-        `Alan Turing. Turing ha aiutato gli Alleati decifrando messaggi intercettati dalle forze tedesche, ottenendo informazioni cruciali per la vittoria degli Alleati. Ha anche creato il "test di Turing", che valuta la capacità di una macchina di mostrare comportamenti umani, simile all'intelligenza artificiale.`,
+        "Alan Turing. Turing ha aiutato gli Alleati decifrando messaggi intercettati dalle forze tedesche, ottenendo informazioni cruciali per la vittoria degli Alleati. Ha anche creato il \"test di Turing\", che valuta la capacità di una macchina di mostrare comportamenti umani, simile all'intelligenza artificiale.",
       ],
       points: 300,
     },
@@ -238,4 +236,4 @@ export const questions: { [category: string]: IBaseGameQuestion[] } = {
       points: 500,
     },
   ],
-};
+}

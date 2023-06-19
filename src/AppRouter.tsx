@@ -1,6 +1,6 @@
 import { Outlet, createBrowserRouter } from 'react-router-dom';
 import { Content, Footer, Header } from '@/containers';
-import { Board, Question, NoMatch } from '@/pages';
+import { Board, Question, NoMatch, Init } from '@/pages';
 
 const CommonRoute = () => {
   return (
@@ -21,6 +21,10 @@ const AppRouter = createBrowserRouter([
     children: [
       {
         path: '',
+        element: <Init />,
+      },
+      {
+        path: '/board',
         element: <Board />,
       },
       {

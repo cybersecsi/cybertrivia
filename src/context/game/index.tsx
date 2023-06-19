@@ -1,9 +1,12 @@
-import { createContext, useContext, useState } from 'react';
-import { IBaseGameQuestion, IGameBoard, IGameQuestionWithId } from '@/types';
-import { questions } from '@/config';
+import { createContext, useContext, useEffect, useState } from 'react';
+import { IGameBoard, IGameQuestionWithId } from '@/types';
+import { LOCAL_STORAGE_KEY } from '@/config';
+import { getObjectFromStorage, saveObjectToStorage } from '@/utils/helper';
 
 interface ProviderInterface {
-  gameBoard: IGameBoard;
+  initFromStorage: () => void;
+  initFromData: (data: IGameBoard) => void;
+  gameBoard: IGameBoard | undefined;
   setQuestionResult: (
     question: { category: string; id: number },
     result: 'correct' | 'incorrect',
@@ -12,31 +15,47 @@ interface ProviderInterface {
 
 const GameContext = createContext<ProviderInterface | null>(null);
 
-const initialGameBoard = (): IGameBoard => {
-  const gameBoard: IGameBoard = {};
-  let currentId = 1;
-  for (const category of Object.keys(questions)) {
-    gameBoard[category] = [];
-    for (const question of questions[category]) {
-      gameBoard[category].push({
-        ...question,
-        status: 'pending',
-        id: currentId,
-      });
-      currentId += 1;
-    }
-  }
-  return gameBoard;
-};
-
 const GameProvider = ({ children }: any): any => {
-  const [gameBoard, setGameBoard] = useState<IGameBoard>(initialGameBoard());
+  const [gameBoard, setGameBoard] = useState<IGameBoard>();
+
+  const initFromData = (data: IGameBoard) => {
+    // If not in local storage then take from default
+    const gBoard: IGameBoard = {};
+    let currentId = 1;
+    for (const category of Object.keys(data)) {
+      gBoard[category] = [];
+      for (const question of data[category]) {
+        gBoard[category].push({
+          ...question,
+          status: 'pending',
+          id: currentId,
+        });
+        currentId += 1;
+      }
+    }
+    setGameBoard(gBoard);
+    saveObjectToStorage(LOCAL_STORAGE_KEY, gBoard);
+  };
+
+  const initFromStorage = () => {
+    const objData = getObjectFromStorage(LOCAL_STORAGE_KEY);
+    setGameBoard(objData as IGameBoard);
+  };
+
+  useEffect(() => {
+    if (gameBoard) {
+      saveObjectToStorage(LOCAL_STORAGE_KEY, gameBoard);
+    }
+  }, [gameBoard]);
 
   const setQuestionResult = (
     question: { category: string; id: number },
     result: 'correct' | 'incorrect',
   ) => {
-    setGameBoard((currentGameBoard: IGameBoard) => {
+    setGameBoard((currentGameBoard: IGameBoard | undefined) => {
+      if (!currentGameBoard) {
+        return {};
+      }
       return {
         ...currentGameBoard,
         [question.category]: currentGameBoard[question.category].map((q: IGameQuestionWithId) => {
@@ -56,6 +75,8 @@ const GameProvider = ({ children }: any): any => {
   return (
     <GameContext.Provider
       value={{
+        initFromData,
+        initFromStorage,
         gameBoard,
         setQuestionResult,
       }}

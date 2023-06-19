@@ -18,8 +18,16 @@ const Question = () => {
     navigate('/');
   };
 
+  const goBoard = () => {
+    navigate('/board');
+  };
+
   const loadQuestion = async () => {
     if (!id) {
+      goBoard();
+      return;
+    }
+    if (!gameBoard) {
       goHome();
       return;
     }
@@ -27,14 +35,14 @@ const Question = () => {
       gameBoard[category].find((q: IGameQuestionWithId) => q.id === parseInt(id)),
     );
     if (!category) {
-      goHome();
+      goBoard();
       return;
     }
     const questionWithId = Object.values(gameBoard[category]).find(
       (q: IGameQuestionWithId) => q.id === parseInt(id),
     );
     if (!questionWithId) {
-      goHome();
+      goBoard();
       return;
     }
     setQuestion({
@@ -55,12 +63,14 @@ const Question = () => {
     setIsLoading(true);
     setQuestionResult({ category: question.category, id: question.id }, result);
     await sleep(500);
-    goHome();
+    goBoard();
   };
 
   useEffect(() => {
     if (gameBoard) {
       loadQuestion();
+    } else {
+      goHome();
     }
   }, [gameBoard]);
 
@@ -93,20 +103,20 @@ const Question = () => {
               <div className='w-full grid grid-cols-2 gap-2 mt-2'>
                 <button
                   onClick={() => setAnswer('correct')}
-                  className='button-green justify-center'
+                  className='button-green justify-center uppercase font-bold'
                 >
                   Risposta Corretta
                 </button>
                 <button
                   onClick={() => setAnswer('incorrect')}
-                  className='button-red justify-center'
+                  className='button-red justify-center uppercase font-bold'
                 >
                   Risposta Errata
                 </button>
               </div>
             ) : (
               <button
-                onClick={goHome}
+                onClick={goBoard}
                 className={`mt-2 gap-2 justify-center font-semibold uppercase ${
                   question.status === 'correct' ? 'button-green' : 'button-red'
                 }`}
