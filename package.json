@@ -1,6 +1,6 @@
 {
   "name": "cyber-trivia",
-  "packageManager": "yarn@3.6.0",
+  "packageManager": "pnpm@8.6.1",
   "private": true,
   "version": "0.0.1",
   "type": "module",
