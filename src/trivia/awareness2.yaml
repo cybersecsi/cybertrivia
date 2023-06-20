@@ -1,0 +1,189 @@
+{
+  'Phishing e OSINT':
+    [
+      {
+        question: ["Qual è l'obiettivo principale di un attacco di phishing?"],
+        answers:
+          [
+            "L'obiettivo principale di un attacco di phishing è ingannare gli utenti al fine di ottenere informazioni personali o sensibili, come password, numeri di carte di credito o dati finanziari.",
+          ],
+        points: 100,
+      },
+      {
+        question: ["Cosa significa l'acronimo OSINT nel contesto della sicurezza informatica?"],
+        answers:
+          [
+            'OSINT significa Open Source Intelligence, ed è il processo di raccolta e analisi di informazioni provenienti da fonti di dati pubbliche disponibili liberamente.',
+          ],
+        points: 200,
+      },
+      {
+        question: ['Quali sono alcune fonti comuni di informazioni OSINT?'],
+        answers:
+          [
+            'Alcune fonti comuni di informazioni OSINT includono motori di ricerca, social media, siti web pubblici, forum di discussione e registri pubblici.',
+          ],
+        points: 300,
+      },
+      {
+        question:
+          [
+            'Quali sono alcune misure che le organizzazioni possono adottare per proteggersi dal phishing?',
+          ],
+        answers:
+          [
+            "Le organizzazioni possono adottare misure come l'implementazione di filtri anti-phishing per le e-mail, l'istruzione e la sensibilizzazione dei dipendenti sulla consapevolezza del phishing, l'uso di autenticazione a due fattori, l'aggiornamento regolare del software di sicurezza e l'implementazione di politiche di sicurezza solide.",
+          ],
+        points: 400,
+      },
+      {
+        question: ['Qual è la differenza tra phishing e spear phishing?'],
+        answers:
+          [
+            'Il phishing è un attacco di massa in cui gli aggressori inviano messaggi generici a un ampio gruppo di persone. Il spear phishing, invece, è un attacco mirato in cui gli aggressori personalizzano i messaggi per ingannare specifici individui o organizzazioni',
+          ],
+        points: 500,
+      },
+    ],
+  'Vero o Falso':
+    [
+      {
+        question:
+          [
+            'In crittografia, il termine "Plaintext" è usato per descrivere i dati in forma non crittografata.',
+          ],
+        answers: ['Vero'],
+        points: 100,
+      },
+      {
+        question:
+          [
+            'Vero o falso? Un "attacco di forza bruta" è un tentativo sistematico e ripetuto di indovinare una password o una chiave crittografica attraverso il tentativo di tutte le possibili combinazioni.',
+          ],
+        answers: ['Vero'],
+        points: 100,
+      },
+      {
+        question:
+          [
+            'Vero o falso? La crittografia simmetrica utilizza un paio di chiavi, una pubblica e una privata, per crittografare e decrittografare i dati, mentre la crittografia asimmetrica utilizza una singola chiave per entrambe le operazioni.',
+          ],
+        answers: ["Falso, è l'esatto opposto!"],
+        points: 300,
+      },
+      {
+        question:
+          [
+            "Vero o falso? L'attacco Trojan Horse mira a sovraccaricare un sistema o una rete di computer con un'elevata quantità di traffico, rendendoli inaccessibili agli utenti legittimi",
+          ],
+        answers: ["Falso, l'attacco in questione si chiama DDoS (Distributed Denial of Service)"],
+        points: 400,
+      },
+      {
+        question:
+          [
+            'Quando una funzione crittografica di hash produce due digest diversi per lo stesso input si configura un hash collision.',
+          ],
+        answers:
+          [
+            'Falso, Un hash collision si verifica quando due diversi input producono la stessa hash di output',
+          ],
+        points: 500,
+      },
+    ],
+  'Cookies e GDPR':
+    [
+      {
+        question: ['Qual è lo scopo principale del GDPR in relazione ai cookies?'],
+        answers:
+          [
+            'Il principale scopo del GDPR in relazione ai cookies è proteggere la privacy degli utenti e garantire che le loro informazioni personali siano trattate in modo sicuro e consapevole.',
+          ],
+        points: 100,
+      },
+      {
+        question:
+          [
+            "Cosa sono i cookie di profilazione e perché richiedono il consenso esplicito dell'utente secondo il GDPR?",
+          ],
+        answers:
+          [
+            "I cookie di profilazione sono utilizzati per tracciare il comportamento degli utenti e creare profili basati su di esso. Richiedono il consenso esplicito dell'utente perché raccolgono informazioni personali sensibili e possono influenzare la privacy dell'utente.",
+          ],
+        points: 200,
+      },
+      {
+        question:
+          [
+            "Quali sono le informazioni che un sito web deve fornire riguardo all'utilizzo dei cookies secondo il GDPR?",
+          ],
+        answers:
+          [
+            "Secondo il GDPR, un sito web deve fornire informazioni chiare e trasparenti riguardo all'utilizzo dei cookies, inclusi il tipo di cookies utilizzati, il loro scopo e il periodo di conservazione dei dati.",
+          ],
+        points: 300,
+      },
+      {
+        question:
+          [
+            'Quali sono le principali responsabilità delle aziende in relazione alla gestione dei cookies e del GDPR?',
+          ],
+        answers:
+          [
+            'Le principali responsabilità delle aziende sono:',
+            "1. Ottenere il consenso esplicito dell'utente per l'utilizzo dei cookie di profilazione.",
+            "2. Fornire un'informativa chiara e comprensibile riguardo all'utilizzo dei cookies.",
+            '3. Garantire la sicurezza e la protezione dei dati personali degli utenti.',
+          ],
+        points: 400,
+      },
+      {
+        question:
+          [
+            'Cosa succede se un sito web non rispetta le norme del GDPR in relazione alla gestione dei cookies?',
+          ],
+        answers:
+          [
+            'Se un sito web non rispetta le norme del GDPR in relazione alla gestione dei cookies, può essere soggetto a sanzioni e multe finanziarie significative. Le autorità di controllo hanno il potere di applicare tali sanzioni per garantire il rispetto delle norme sulla privacy e dei diritti degli utenti.',
+          ],
+        points: 500,
+      },
+    ],
+  'Cyber Stats':
+    [
+      {
+        question: ['Quanto spende una piccola impresa, in media, in Cybersecurity?'],
+        answers: ['Meno di 500 dollari'],
+        points: 100,
+      },
+      {
+        question: ['A quanto ammonta, in denaro, il traffico illecito tramite Bitcoin?'],
+        answers:
+          [
+            "76 miliardi di dollari. Bitcoin permette agli utenti di mantenere l'anonimato e per questo motivo è spesso utilizzato in attività illecite",
+          ],
+        points: 200,
+      },
+      {
+        question: ['Quanti account utente sono stati vittima di data breach nel 2019?'],
+        answers: ['4 miliardi di account utente. Nel 2019 ci sono stati più di 6mila breaches'],
+        points: 300,
+      },
+      {
+        question:
+          [
+            'Qual è la percentuale di cittadini USA che cambiano la password in seguito ad un data breach?',
+          ],
+        answers: ['Solo 1 su 5'],
+        points: 400,
+      },
+      {
+        question:
+          [
+            "Nei primi 6 mesi del 2022 l'industria della finanza è stata quella più colpita da attacchi di phishing. Di quanti attacchi stiamo parlando?",
+          ],
+        answers: ['Più di 75 milioni di attacchi'],
+        points: 500,
+      },
+    ],
+}
