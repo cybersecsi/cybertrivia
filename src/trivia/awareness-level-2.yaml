@@ -1,6 +1,4 @@
-{
-  'Phishing e OSINT':
-    [
+{    [
       {
         question: ["Qual è l'obiettivo principale di un attacco di phishing?"],
         answers:
@@ -152,27 +150,27 @@
   'Cyber Stats':
     [
       {
-        question: ['Quanto spende una piccola impresa, in media, in Cybersecurity?'],
-        answers: ['Meno di 500 dollari'],
+        question: ['A quanto ammonta la spesa media delle PMI per la sicurezza informatica nel 2023? (Fonte cybersecitalia.it)'],
+        answers: ['4800 euro'],
         points: 100,
       },
       {
-        question: ['A quanto ammonta, in denaro, il traffico illecito tramite Bitcoin?'],
+        question: ['A quanto ammonta, in denaro, il traffico illecito (Ransomware, Terrorismo, Scam, Darknet, Cybercriminalità) tramite Bitcoin nel 2022? (Fonte Crypto Crime Report)'],
         answers:
           [
-            "76 miliardi di dollari. Bitcoin permette agli utenti di mantenere l'anonimato e per questo motivo è spesso utilizzato in attività illecite",
+            "20.1 miliardi di dollari. Bitcoin permette agli utenti di mantenere l'anonimato e per questo motivo è spesso utilizzato in attività illecite",
           ],
         points: 200,
       },
       {
-        question: ['Quanti account utente sono stati vittima di data breach nel 2019?'],
+        question: ['Quanti account utente sono stati vittima di data breach nel 2019? (Fonte Statista)'],
         answers: ['4 miliardi di account utente. Nel 2019 ci sono stati più di 6mila breaches'],
         points: 300,
       },
       {
         question:
           [
-            'Qual è la percentuale di cittadini USA che cambiano la password in seguito ad un data breach?',
+            'Qual è la percentuale di cittadini USA che cambiano la password in seguito ad un data breach? (Fonte aag-it.com, 2019)',
           ],
         answers: ['Solo 1 su 5'],
         points: 400,
@@ -180,7 +178,7 @@
       {
         question:
           [
-            "Nei primi 6 mesi del 2022 l'industria della finanza è stata quella più colpita da attacchi di phishing. Di quanti attacchi stiamo parlando?",
+            "Nei primi 6 mesi del 2022 l'industria della finanza è stata quella più colpita da attacchi di phishing. Di quanti attacchi stiamo parlando? (Fonte sangfor.com)",
           ],
         answers: ['Più di 75 milioni di attacchi'],
         points: 500,

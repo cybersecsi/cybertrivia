@@ -249,38 +249,38 @@
     [
       {
         question:
-          ['Quanti attacchi informatici tentati vengono segnalati al Pentagono ogni giorno?'],
+          ['Quanti attacchi informatici tentati vengono segnalati al Pentagono ogni giorno? (Fonte CISA, 2019)'],
         answers: ['Oltre 10 milioni.'],
         points: 100,
       },
       {
         question:
           [
-            'Quanti posti di lavoro in campo di sicurezza informatica vacanti ci sono solo negli Stati Uniti?',
+            'Quanti posti di lavoro in campo di sicurezza informatica vacanti ci sono globalmente? (Fonte ISC, 2022)',
           ],
-        answers: ['310.000'],
+        answers: ['3.4 milioni'],
         points: 200,
       },
       {
         question:
           [
-            'A livello globale, quanti posti di lavoro in campo di sicurezza informatica vacanti si prevede ci saranno entro il 2022?',
+            'Quanti attacchi di tipo ransomware sono stati rilevati globalmente nel 2022? (Fonte Statista)',
           ],
-        answers: ['1,8 milioni'],
+        answers: ['493.33 milioni'],
         points: 300,
       },
       {
         question:
           [
-            'Qual è il costo stimato di un attacco di phishing di successo per una singola piccola o media impresa?',
+            'Quanti cittadini americani sono stati vittima di attacchi cyber nella prima metà del 2022? (Fonte aag-it.com)',
           ],
-        answers: ['1,6 milioni di dollari USD'],
+        answers: ['53.35 milioni'],
         points: 400,
       },
       {
         question:
-          ['Qual è il costo globale stimato della cybercriminalità entro la fine del 2019?'],
-        answers: ['2 trilioni di dollari USD'],
+          ["Di quanto è stato l'incremento percentuale di attacchi malware su scala globale tra il 2020 e il 2019? (Fonte aag-it.com) "],
+        answers: ['358%'],
         points: 500,
       },
     ],

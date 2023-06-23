@@ -1,0 +1,155 @@
+{
+  'Footprinting e OSINT':
+    [
+      {
+        question:
+          [
+            'Qual è la risorsa più importante per un attaccante?',
+          ],
+        answers: 
+          [
+            "L'informazione. Più informazioni si hanno sulla vittima, maggiori sono le probabilità di successo di un attacco.",
+          ],
+        points: 100,
+      },
+      {
+        question: ["Cosa significa l'acronimo OSINT nel contesto della sicurezza informatica?"],
+        answers:
+          [
+            'OSINT significa Open Source Intelligence, ed è il processo di raccolta e analisi di informazioni provenienti da fonti di dati pubbliche disponibili liberamente.',
+          ],
+        points: 200,
+      },
+      {
+        question: ['Quali sono alcune fonti comuni di informazioni OSINT?'],
+        answers:
+          [
+            'Alcune fonti comuni di informazioni OSINT includono motori di ricerca, social media, siti web pubblici, forum di discussione e registri pubblici.',
+          ],
+        points: 300,
+      },
+      {
+        question:
+          [
+            "Se un attaccante scoprisse una vostra vecchia password (ormai cambiata) in un data breach, cosa potrebbe farsene?",
+          ],
+        answers: 
+          [
+            "Potrebbe provarla su altri servizi a cui siete registrati. È molto probabile che le persone riutilizzino la stessa password su servizi diversi."
+          ],
+        points: 400,
+      },
+      {
+        question:
+          [
+            'È importante fornire quante più informazioni possibili di sé e della propria azienda sui social, in modo da risultare più attivi. Vero o Falso?',
+          ],
+        answers:
+          [
+            'Falso. Bisogna utilizzare solo le informazioni strettamente necessarie, altrimenti si potrebbe essere vittima di OSINT e Social Engineering.',
+          ],
+        points: 500,
+      },
+    ],
+    'Social Engineering':
+    [
+      {
+        question: ['Qual è lo scopo di un attacco di Social Engineering?'],
+        answers:
+          [
+            'Il suo scopo principale è quello di raccogliere informazioni su una vittima o convincerla a fare qualcosa utilizzando un pretesto.',
+          ],
+        points: 100,
+      },
+      {
+        question:
+          [
+            "Un attacco di social engineering può avvenire non solo utilizzando mezzi digitali. Vero o Falso?",
+          ],
+        answers:
+          [
+            "Vero. Un attaccante potrebbe fermare un anziano per strada e fingersi amico di suo figlio, chiedendogli dei soldi o delle informazioni.",
+          ],
+        points: 200,
+      },
+      {
+        question:
+          [
+            "Se un documento non mi serve più posso buttarlo nella spazzatura?",
+          ],
+        answers:
+          [
+            "No. Un attaccante potrebbe utilizzare la cosiddetta tecnica di Dumpster Diving, ossia cercare nella spazzatura informazioni sensibili di un'azienda. Meglio usare un tritacarte.",
+          ],
+        points: 300,
+      },
+      {
+        question:
+          [
+            'Qual è la miglior contromisura contro gli attacchi di Social Engineering?',
+          ],
+        answers:
+          [
+            "La security awareness. Conoscere questo tipo di attacchi ed essere preparati è fondamentale.",
+          ],
+        points: 400,
+      },
+      {
+        question:
+          [
+            "L'anello debole della sicurezza sfruttato dal social engineering sono i computer non aggiornati. Vero o Falso?",
+          ],
+        answers:
+          [
+            "Falso. È vero che i computer vanno aggiornati, ma l'anello debole in questo caso è l'essere umano.",
+          ],
+        points: 500,
+      },
+    ],
+    'Phishing':
+    [
+      {
+        question: ["Qual è l'obiettivo principale di un attacco di phishing?"],
+        answers:
+          [
+            "L'obiettivo principale di un attacco di phishing è ingannare gli utenti al fine di ottenere informazioni personali o sensibili, come password, numeri di carte di credito o dati finanziari.",
+          ],
+        points: 100,
+      },
+      {
+        question: ["Se stiamo attenti alle email possiamo risolvere completamente il problema del phishing. Vero o Falso?"],
+        answers:
+          [
+            'Falso. Un attacco di phishing potrebbe anche essere effettuato tramite SMS (Smishing) o chiamate voce (Vishing), ad esempio.',
+          ],
+        points: 200,
+      },
+      {
+        question: ['Qual è la differenza tra mass-mailed phishing e spear phishing?'],
+        answers:
+          [
+            'Il mass-mailed phishing è un attacco di massa in cui gli aggressori inviano messaggi generici a un ampio gruppo di persone. Il spear phishing, invece, è un attacco mirato in cui gli aggressori personalizzano i messaggi per ingannare specifici individui o organizzazioni.',
+          ],
+        points: 300,
+      },
+      {
+        question:
+          [
+            'Quali sono alcune misure che le organizzazioni possono adottare per proteggersi dal phishing?',
+          ],
+        answers:
+          [
+            "Le organizzazioni possono adottare misure come l'implementazione di filtri anti-phishing per le e-mail, l'istruzione e la sensibilizzazione dei dipendenti sulla consapevolezza del phishing, l'uso di autenticazione a due fattori, l'aggiornamento regolare del software di sicurezza e l'implementazione di politiche di sicurezza solide.",
+          ],
+        points: 400,
+      },
+      {
+        question: ['È opportuno fornire informazioni personali via email se a richiederle è la nostra banca. Vero o Falso?'],
+        answers:
+          [
+            'Falso. Nessun ente lecito richiederebbe mai informazioni personali via email, né tantomeno di cliccare su un link per farlo.',
+          ],
+        points: 500,
+      },
+    ],
+}
